@@ -1,0 +1,23 @@
+# ---- Ficheros de proyecto de Burp Suite ----
+# El .burp puede contener cookies de sesión y datos capturados: NUNCA se sube.
+*.burp
+*.burpproject
+
+# ---- Capturas y evidencias con datos sensibles ----
+# Si guardas requests/responses crudos, revísalos antes: pueden llevar tokens.
+evidencias-privadas/
+*.har
+
+# ---- Sistema operativo ----
+.DS_Store
+Thumbs.db
+*~
+
+# ---- Editores / IDE ----
+.vscode/
+.idea/
+*.swp
+
+# ---- Notas locales que no son para el repo público ----
+BORRADOR*.md
+scratch/
