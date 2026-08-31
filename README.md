@@ -21,9 +21,6 @@ Todo lo que hay aquí se practica **solo** en entornos hechos para ello:
 Nunca contra sistemas de terceros. Atacar un sistema sin permiso explícito es un delito,
 y además no es de lo que va esto: esto va de aprender a **construir software más seguro**.
 
-En este repo **no se copian flags ni las soluciones oficiales literales** de los labs. Cada
-apunte explica el concepto y mi razonamiento **con mis palabras**.
-
 ---
 
 ## Cómo usar este repo
@@ -62,20 +59,6 @@ Sigo el temario de PortSwigger, de menos a más. Idea de recorrido:
 4. Cross-site scripting (XSS)
 5. CSRF
 6. Y práctica abierta sobre OWASP Juice Shop aplicando lo anterior
-
-Un tema por sesión, sin prisa. Cuando tenga vocabulario suficiente, las sesiones pasan a
-ser "rompo tal cosa en Juice Shop" en vez de labs guiados.
-
----
-
-## Por qué existe este repo
-
-Estudio seguridad como uno de tres tracks en rotación (junto a Cloud/DevOps e IA/ML). El
-objetivo no es ser pentester: es que, como desarrollador, entienda las vulnerabilidades lo
-bastante bien como para no escribirlas. Documentarlo para otros es parte del método: si no
-sé explicarlo, es que no lo he entendido.
-
-Si ves un error, abre un issue. Se agradece.
 
 ---
 
