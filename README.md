@@ -62,6 +62,18 @@ Sigo el temario de PortSwigger, de menos a más. Idea de recorrido:
 
 ---
 
+## Otros repos de esta serie
+
+Este repo es uno de tres, montados con la misma estructura de "asignatura":
+
+| Repo | De qué va |
+|---|---|
+| [`cloud-devops-lab`](https://github.com/Manueh9/cloud-devops-lab) | Docker, Kubernetes, Terraform, CI/CD, Azure, observabilidad |
+| [`security-lab`](https://github.com/Manueh9/security-lab) | Este: Seguridad web: PortSwigger Web Security Academy y OWASP Juice Shop |
+| [`ml-lab`](https://github.com/Manueh9/ml-lab) | IA/ML con Python: datos, modelos y llevarlos a producción |
+
+---
+
 ## Licencia
 
 [MIT](LICENSE)
