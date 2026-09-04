@@ -156,6 +156,10 @@ Resolví los dos labs Apprentice de PortSwigger. Los explico con mis palabras.
 
 ### Lab 1 — Retrieval of hidden data
 
+<details>
+
+<summary>Solución</summary>
+
 **Campo vulnerable:** el parámetro `category` de la URL (`/filter?category=...`),
 que va directo al `WHERE` de la query.
 
@@ -171,7 +175,13 @@ SELECT * FROM products WHERE category = '' OR 1=1--' AND released = 1
 y devuelve todos los productos; el `--` comenta el `AND released = 1`, que era el
 filtro que ocultaba los productos no publicados.
 
+</details>
+
 ### Lab 2 — Login bypass
+
+<details>
+
+<summary>Solución</summary>
 
 **Campo vulnerable:** el campo de usuario del formulario de login.
 
@@ -187,7 +197,9 @@ SELECT * FROM users WHERE username = 'administrator'--' AND password = ''
 comprobación de la contraseña entera. La BD encuentra al usuario `administrator` y
 la app me autentica sin validar ninguna contraseña.
 
-### Lo que me llevo
+</details>
+
+### Conclusión
 
 La causa de las dos es la misma: el input del usuario acaba formando parte de la
 sentencia SQL en vez de tratarse como un dato. Con una consulta parametrizada
