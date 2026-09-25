@@ -39,26 +39,35 @@ y además no es de lo que va esto: esto va de aprender a **construir software m�
 | # | Apunte | De qué va |
 |---|---|---|
 | 01 | [SQL Injection](apuntes/01-sql-injection.md) | Meter SQL por un input; por qué pasa y cómo lo evita un `SqlParameter` |
+| 02 | [Authentication](apuntes/02-authentication.md) | Fallos de lógica en el login; bypass de 2FA |
 
-*(Se irá ampliando: autenticación, XSS, control de acceso, CSRF…)*
+*(Se irá ampliando: control de acceso, XSS, CSRF…)*
 
 ### Labs
 
-Aún sin entradas propias. Los primeros labs (SQL injection Apprentice de PortSwigger) se
-resumen dentro del apunte 01.
+| # | Lab | Nivel | Estado |
+|---|-----|-------|--------|
+| 02 | [2FA simple bypass](labs/02-2fa-simple-bypass/) | Apprentice | ✅ Completo |
+
+*(Los labs de SQLi del apunte 01 se quedan documentados dentro de ese apunte; el primer lab
+con carpeta propia es este 02, por eso la numeración de `labs/` empieza ahí.)*
 
 ---
 
 ## Roadmap (orden previsto)
 
-Sigo el temario de PortSwigger, de menos a más. Idea de recorrido:
+Sigo el temario de PortSwigger **por nivel Apprentice, tema a tema**: cierro el Apprentice de
+cada tema y paso al siguiente, dejando los Practitioner para una segunda vuelta.
 
-1. **SQL injection** ← estoy aquí
-2. Authentication (fallos de login, fuerza bruta, lógica)
+1. **SQL injection** — Apprentice ✅ (2 labs)
+2. **Authentication** ← estoy aquí — Apprentice en curso (2FA bypass ✅; quedan *password reset broken logic* y *username enumeration*, este último con Burp)
 3. Access control (IDOR, escalada de privilegios)
 4. Cross-site scripting (XSS)
 5. CSRF
 6. Y práctica abierta sobre OWASP Juice Shop aplicando lo anterior
+
+> Nota: el recuento de labs Apprentice de cada tema lo verifico el día que arranco ese tema,
+> porque PortSwigger reorganiza su catálogo cada cierto tiempo.
 
 ---
 
