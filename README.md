@@ -32,6 +32,24 @@ y además no es de lo que va esto: esto va de aprender a **construir software m�
 
 ---
 
+## Ruta de aprendizaje
+
+| # | Tema | De qué va | Estado |
+|---|---|---|---|
+| 1 | SQL injection | Cuando lo que escribe el usuario acaba formando parte de la consulta | ✅ Apprentice hecho |
+| 2 | Authentication | Fallos de lógica en el login, segundo factor y fuerza bruta | 🟢 En curso |
+| 3 | Access control | Llegar a datos o funciones que no son tuyos: IDOR, escalada de privilegios | 🔜 Pendiente |
+| 4 | Cross-site scripting (XSS) | Conseguir que la página ejecute tu JavaScript en el navegador de otro | 🔜 Pendiente |
+| 5 | CSRF | Que el navegador de la víctima haga una acción por ella sin que lo sepa | 🔜 Pendiente |
+| 6 | OWASP Juice Shop | Práctica abierta: todo lo anterior sobre una aplicación completa | 🔜 Pendiente |
+| 7 | Segunda vuelta: Practitioner | Los labs de nivel intermedio de los temas ya vistos | 🔜 Pendiente |
+| 8 | DevSecOps | La seguridad dentro del pipeline: análisis estático, escaneo de imágenes, detección de secretos y ataque automático al entorno de pruebas | 🔜 Pendiente |
+| 9 | Seguridad en la nube | Identidades, secretos y red en Azure | 🔜 Pendiente |
+
+El criterio: en PortSwigger, primero el nivel **Apprentice de cada tema**, uno detrás de otro, para ver pronto la variedad de fallos; los **Practitioner** quedan para una segunda vuelta. Después, aplicarlo a una aplicación entera, y al final llevarlo al terreno de un desarrollador: que el propio pipeline detecte las vulnerabilidades antes de que lleguen a producción.
+
+---
+
 ## Índice
 
 ### Apuntes
