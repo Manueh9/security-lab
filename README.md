@@ -40,6 +40,8 @@ y además no es de lo que va esto: esto va de aprender a **construir software m�
 |---|---|---|
 | 01 | [SQL Injection](apuntes/01-sql-injection.md) | Meter SQL por un input; por qué pasa y cómo lo evita un `SqlParameter` |
 | 02 | [Authentication](apuntes/02-authentication.md) | Fallos de lógica en el login; bypass de 2FA |
+| 03 | [Access control](apuntes/03-access-control.md) | El permiso se comprueba en cada acción; funcionalidad de administración sin proteger |
+
 
 *(Se irá ampliando: control de acceso, XSS, CSRF…)*
 
@@ -48,6 +50,8 @@ y además no es de lo que va esto: esto va de aprender a **construir software m�
 | # | Lab | Nivel | Estado |
 |---|-----|-------|--------|
 | 02 | [2FA simple bypass](labs/02-2fa-simple-bypass/) | Apprentice | ✅ Completo |
+| 03 | [Unprotected admin functionality](labs/03-unprotected-admin/) | PortSwigger · Apprentice | ✅ |
+
 
 *(Los labs de SQLi del apunte 01 se quedan documentados dentro de ese apunte; el primer lab
 con carpeta propia es este 02, por eso la numeración de `labs/` empieza ahí.)*
