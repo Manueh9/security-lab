@@ -69,7 +69,7 @@ El criterio: en PortSwigger, primero el nivel **Apprentice de cada tema**, uno d
 |---|-----|-------|--------|
 | 02 | [2FA simple bypass](labs/02-2fa-simple-bypass/) | Apprentice | ✅ Completo |
 | 03 | [Unprotected admin functionality](labs/03-unprotected-admin/) | PortSwigger · Apprentice | ✅ |
-
+| 04 | [Funcionalidad de administración con URL impredecible](labs/04-admin-url-impredecible/) | PortSwigger · Apprentice | ✅ |
 
 *(Los labs de SQLi del apunte 01 se quedan documentados dentro de ese apunte; el primer lab
 con carpeta propia es este 02, por eso la numeración de `labs/` empieza ahí.)*

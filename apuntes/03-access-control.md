@@ -45,3 +45,42 @@ escondido. Confiar en él para "ocultar" el panel de admin es seguridad por ocul
 ## 5. El lab
 
 [labs/03-unprotected-admin](../labs/03-unprotected-admin/) — PortSwigger, Apprentice, navegador.
+## 7. La variante: ruta impredecible, y por qué la fuerza bruta no sirve
+
+Una funcionalidad de administración también se puede "proteger" dándole una ruta con un
+identificador que nadie adivinaría. **No es un control de acceso.** El permiso sigue sin
+comprobarse; lo único que cambia es cómo se encuentra la puerta.
+
+Y se ve muy bien comparando dos ataques sobre el mismo lab:
+
+| Método | Qué hace | Resultado |
+|---|---|---|
+| Fuerza bruta de rutas (dirb) | Prueba una lista de nombres conocidos | No la encuentra: la ruta no está en ninguna lista |
+| Leer el cliente (F12) | Mira el HTML/JS que el servidor ya envió | La ruta estaba en el JavaScript |
+
+La ofuscación **sí** detiene la fuerza bruta, y es **inútil** contra quien lee lo que el servidor
+le mandó. Esconder no previene el descubrimiento: cambia por qué puerta entra.
+
+> **La razón, en una frase:** todo lo que el servidor envía al navegador es público. Si la ruta de
+> administración aparece en el código del cliente —aunque sea para no pintar un enlace— está
+> publicada.
+
+### Cliente vs servidor: la diferencia que importa como dev .NET
+
+```csharp
+// En JavaScript — el if corre en el CLIENTE
+if (isAdmin) { pintarEnlace('/admin-xyz'); }
+// -> el enlace SE ENVÍA a todo el mundo; solo se oculta. Inútil como control.
+```
+
+```csharp
+// En una vista Razor — el if corre en el SERVIDOR
+@if (User.IsInRole("Admin")) { <a href="/admin-xyz">Admin</a> }
+// -> el enlace NO se envía a quien no es admin. Mejor, pero NO suficiente.
+```
+
+Razor es mejor porque no filtra la ruta, pero **ni siquiera eso basta**: el endpoint sigue
+necesitando su `[Authorize]`, porque un atacante no necesita el enlace. La defensa de verdad es
+denegar por defecto (`FallbackPolicy`) y comprobar el rol en la propia acción.
+
+El lab que lo demuestra: [labs/04-admin-url-impredecible](../labs/04-admin-url-impredecible/).
