@@ -4,7 +4,7 @@
 > Teoría: [apuntes/03-access-control.md](../../apuntes/03-access-control.md)
 
 **PortSwigger Web Security Academy · Access control · Apprentice · solo navegador.**
-Enlace del tema: <https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url\>
+Enlace del tema: https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality-with-unpredictable-url\
 
 ## Alcance ético
 

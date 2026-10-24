@@ -18,8 +18,6 @@ Todo lo que hay aquí se practica **solo** en entornos hechos para ello:
 - **[PortSwigger Web Security Academy](https://portswigger.net/web-security)** — laboratorios oficiales, legales y gratuitos.
 - **[OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)** — aplicación deliberadamente vulnerable, que levanto en mi propia máquina.
 
-Nunca contra sistemas de terceros. Atacar un sistema sin permiso explícito es un delito,
-y además no es de lo que va esto: esto va de aprender a **construir software más seguro**.
 
 ---
 
@@ -32,24 +30,6 @@ y además no es de lo que va esto: esto va de aprender a **construir software m�
 
 ---
 
-## Ruta de aprendizaje
-
-| # | Tema | De qué va | Estado |
-|---|---|---|---|
-| 1 | SQL injection | Cuando lo que escribe el usuario acaba formando parte de la consulta | ✅ Apprentice hecho |
-| 2 | Authentication | Fallos de lógica en el login, segundo factor y fuerza bruta | 🟢 En curso |
-| 3 | Access control | Llegar a datos o funciones que no son tuyos: IDOR, escalada de privilegios | 🔜 Pendiente |
-| 4 | Cross-site scripting (XSS) | Conseguir que la página ejecute tu JavaScript en el navegador de otro | 🔜 Pendiente |
-| 5 | CSRF | Que el navegador de la víctima haga una acción por ella sin que lo sepa | 🔜 Pendiente |
-| 6 | OWASP Juice Shop | Práctica abierta: todo lo anterior sobre una aplicación completa | 🔜 Pendiente |
-| 7 | Segunda vuelta: Practitioner | Los labs de nivel intermedio de los temas ya vistos | 🔜 Pendiente |
-| 8 | DevSecOps | La seguridad dentro del pipeline: análisis estático, escaneo de imágenes, detección de secretos y ataque automático al entorno de pruebas | 🔜 Pendiente |
-| 9 | Seguridad en la nube | Identidades, secretos y red en Azure | 🔜 Pendiente |
-
-El criterio: en PortSwigger, primero el nivel **Apprentice de cada tema**, uno detrás de otro, para ver pronto la variedad de fallos; los **Practitioner** quedan para una segunda vuelta. Después, aplicarlo a una aplicación entera, y al final llevarlo al terreno de un desarrollador: que el propio pipeline detecte las vulnerabilidades antes de que lleguen a producción.
-
----
-
 ## Índice
 
 ### Apuntes
@@ -57,39 +37,34 @@ El criterio: en PortSwigger, primero el nivel **Apprentice de cada tema**, uno d
 | # | Apunte | De qué va |
 |---|---|---|
 | 01 | [SQL Injection](apuntes/01-sql-injection.md) | Meter SQL por un input; por qué pasa y cómo lo evita un `SqlParameter` |
-| 02 | [Authentication](apuntes/02-authentication.md) | Fallos de lógica en el login; bypass de 2FA |
-| 03 | [Access control](apuntes/03-access-control.md) | El permiso se comprueba en cada acción; funcionalidad de administración sin proteger |
+| 02 | [Authentication](apuntes/02-authentication.md) | Autenticación ≠ autorización; por qué una pantalla de 2FA no protege por sí sola |
+| 03 | [Access control](apuntes/03-access-control.md) | El permiso se comprueba en cada acción; función de admin sin proteger y con URL impredecible |
+| 05 | [Rol decidido por el cliente](apuntes/05-user-role-request-parameter.md) | El control existe pero se fía de una cookie, que el cliente cambia |
 
-
-*(Se irá ampliando: control de acceso, XSS, CSRF…)*
 
 ### Labs
 
-| # | Lab | Nivel | Estado |
-|---|-----|-------|--------|
-| 02 | [2FA simple bypass](labs/02-2fa-simple-bypass/) | Apprentice | ✅ Completo |
+| # | Lab | Plataforma / nivel | Estado |
+|---|---|---|---|
+| 02 | [2FA simple bypass](labs/02-2fa-simple-bypass/) | PortSwigger · Apprentice | ✅ |
 | 03 | [Unprotected admin functionality](labs/03-unprotected-admin/) | PortSwigger · Apprentice | ✅ |
-| 04 | [Funcionalidad de administración con URL impredecible](labs/04-admin-url-impredecible/) | PortSwigger · Apprentice | ✅ |
+| 04 | [Admin con URL impredecible](labs/04-admin-url-impredecible/) | PortSwigger · Apprentice | ✅ |
+| 05 | [User role controlled by request parameter](labs/05-user-role-request-parameter/) | PortSwigger · Apprentice | ✅ |
 
-*(Los labs de SQLi del apunte 01 se quedan documentados dentro de ese apunte; el primer lab
-con carpeta propia es este 02, por eso la numeración de `labs/` empieza ahí.)*
+Los labs de SQL injection (Apprentice) se resumen dentro del apunte 01.
 
 ---
 
 ## Roadmap (orden previsto)
 
-Sigo el temario de PortSwigger **por nivel Apprentice, tema a tema**: cierro el Apprentice de
-cada tema y paso al siguiente, dejando los Practitioner para una segunda vuelta.
+Sigo el temario de PortSwigger, de menos a más. Idea de recorrido:
 
-1. **SQL injection** — Apprentice ✅ (2 labs)
-2. **Authentication** ← estoy aquí — Apprentice en curso (2FA bypass ✅; quedan *password reset broken logic* y *username enumeration*, este último con Burp)
-3. Access control (IDOR, escalada de privilegios)
+1. **SQL injection** ✅
+2. **Authentication** ✅ — falta el lab de enumeración de usuarios, que necesita Burp Suite
+3. **Access control** ← estoy aquí: 3 de los 5 labs Apprentice del itinerario oficial. Siguen los de IDOR
 4. Cross-site scripting (XSS)
 5. CSRF
 6. Y práctica abierta sobre OWASP Juice Shop aplicando lo anterior
-
-> Nota: el recuento de labs Apprentice de cada tema lo verifico el día que arranco ese tema,
-> porque PortSwigger reorganiza su catálogo cada cierto tiempo.
 
 ---
 
